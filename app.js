@@ -7,22 +7,22 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var passport = require('passport');
 var LocalStrategy = require('passport-local');
-var mongoose = require('mongoose');
-var connect = process.env.MONGODB_URI;
+// var mongoose = require('mongoose');
+// var connect = process.env.MONGODB_URI;
 
-var REQUIRED_ENV = "SECRET MONGODB_URI".split(" ");
+//var REQUIRED_ENV = "SECRET MONGODB_URI".split(" ");
 
-REQUIRED_ENV.forEach(function(el) {
-  if (!process.env[el]){
-    console.error("Missing required env var " + el);
-    process.exit(1);
-  }
-});
-
-
-mongoose.connect(connect);
-
-var models = require('./models');
+// REQUIRED_ENV.forEach(function(el) {
+//   if (!process.env[el]){
+//     console.error("Missing required env var " + el);
+//     process.exit(1);
+//   }
+// });
+//
+//
+// mongoose.connect(connect);
+//
+// var models = require('./models');
 
 var routes = require('./routes/routes');
 var auth = require('./routes/auth');
